@@ -45,4 +45,14 @@ public class CustomListTest {
         cityList.addCity(city2);
         assertEquals(2, cityList.countCities());
     }
+
+    @Test
+    void testDeleteCity() {
+        CustomList cityList = new CustomList(null, citylist);
+        City city1 = new City("Mumbai", "Maharashtra");
+        cityList.addCity(city1);
+        assertTrue(cityList.hasCity(city1));
+        cityList.deleteCity(city1);
+        assertFalse(cityList.hasCity(city1));
+    }
 }
