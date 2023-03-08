@@ -37,12 +37,12 @@ public class CustomListTest {
     }
 
     @Test
-    void testCountCities() throws Exception {
+    void testCountCities(){
         CustomList cityList = new CustomList(null, citylist);
         City city1 = new City("Mumbai", "Maharashtra");
-        cityList.add(city1);
+        cityList.addCity(city1);
         City city2 = new City("Jaipur", "Rajasthan");
-        cityList.add(city2);
-        assertEquals(3, cityList.countCities());
+        cityList.addCity(city2);
+        assertEquals(2, cityList.countCities());
     }
 }
