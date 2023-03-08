@@ -47,7 +47,7 @@ public class CustomListTest {
     }
 
     @Test
-    void testDeleteCity() {
+    void testDeleteCity() throws Exception {
         CustomList cityList = new CustomList(null, citylist);
         City city1 = new City("Mumbai", "Maharashtra");
         cityList.addCity(city1);

@@ -66,8 +66,13 @@ public class CustomList extends ArrayAdapter<City> {
         return this.cities.size();
     }
 
-    public void deleteCity(City city){
-
+    public void deleteCity(City city) throws Exception{
+        if (this.cities.contains(city)){
+            this.cities.remove(city);
+        }
+        else{
+            throw new Exception();
+        }
     }
 
 }
